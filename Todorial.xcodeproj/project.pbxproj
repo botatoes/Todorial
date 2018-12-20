@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DC64BFC63BB5E9CD0E703F7 /* Pods_Todorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69A08BA520E34796FDE7FA4 /* Pods_Todorial.framework */; };
 		C064390E21C5DF930025FEC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C064390D21C5DF930025FEC1 /* AppDelegate.swift */; };
 		C064391021C5DF930025FEC1 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C064390F21C5DF930025FEC1 /* TodoListViewController.swift */; };
 		C064391321C5DF930025FEC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C064391121C5DF930025FEC1 /* Main.storyboard */; };
 		C064391521C5DF930025FEC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C064391421C5DF930025FEC1 /* Assets.xcassets */; };
 		C064391821C5DF930025FEC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C064391621C5DF930025FEC1 /* LaunchScreen.storyboard */; };
-		C064392721C8FD360025FEC1 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C064392521C8FD360025FEC1 /* DataModel.xcdatamodeld */; };
 		C064394E21C9966D0025FEC1 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C064394D21C9966D0025FEC1 /* CategoryViewController.swift */; };
+		C064395221C9BD460025FEC1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C064395121C9BD460025FEC1 /* Item.swift */; };
+		C064395421C9BD4D0025FEC1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C064395321C9BD4D0025FEC1 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38250BB5F0550CE880667F68 /* Pods-Todorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todorial.release.xcconfig"; path = "Pods/Target Support Files/Pods-Todorial/Pods-Todorial.release.xcconfig"; sourceTree = "<group>"; };
+		B69A08BA520E34796FDE7FA4 /* Pods_Todorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC0E39A442E4675A6426491 /* Pods-Todorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todorial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Todorial/Pods-Todorial.debug.xcconfig"; sourceTree = "<group>"; };
 		C064390A21C5DF930025FEC1 /* Todorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C064390D21C5DF930025FEC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C064390F21C5DF930025FEC1 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
@@ -24,8 +29,9 @@
 		C064391421C5DF930025FEC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C064391721C5DF930025FEC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C064391921C5DF930025FEC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C064392621C8FD360025FEC1 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		C064394D21C9966D0025FEC1 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		C064395121C9BD460025FEC1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		C064395321C9BD4D0025FEC1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DC64BFC63BB5E9CD0E703F7 /* Pods_Todorial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52F1298B0740FBA0FA10C1A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B69A08BA520E34796FDE7FA4 /* Pods_Todorial.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FE7EF123CDC242E3615B798 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BFC0E39A442E4675A6426491 /* Pods-Todorial.debug.xcconfig */,
+				38250BB5F0550CE880667F68 /* Pods-Todorial.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C064390121C5DF930025FEC1 = {
 			isa = PBXGroup;
 			children = (
 				C064390C21C5DF930025FEC1 /* Todorial */,
 				C064390B21C5DF930025FEC1 /* Products */,
+				6FE7EF123CDC242E3615B798 /* Pods */,
+				52F1298B0740FBA0FA10C1A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,7 +97,8 @@
 		C064392121C8EE380025FEC1 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				C064392521C8FD360025FEC1 /* DataModel.xcdatamodeld */,
+				C064395321C9BD4D0025FEC1 /* Category.swift */,
+				C064395121C9BD460025FEC1 /* Item.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -109,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C064391C21C5DF930025FEC1 /* Build configuration list for PBXNativeTarget "Todorial" */;
 			buildPhases = (
+				66699A4A8F385D1B77D1248C /* [CP] Check Pods Manifest.lock */,
 				C064390621C5DF930025FEC1 /* Sources */,
 				C064390721C5DF930025FEC1 /* Frameworks */,
 				C064390821C5DF930025FEC1 /* Resources */,
+				5ABCA75DE422D7B711C98320 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,15 +197,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5ABCA75DE422D7B711C98320 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Todorial/Pods-Todorial-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Todorial/Pods-Todorial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66699A4A8F385D1B77D1248C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Todorial-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C064390621C5DF930025FEC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C064395221C9BD460025FEC1 /* Item.swift in Sources */,
 				C064394E21C9966D0025FEC1 /* CategoryViewController.swift in Sources */,
 				C064391021C5DF930025FEC1 /* TodoListViewController.swift in Sources */,
-				C064392721C8FD360025FEC1 /* DataModel.xcdatamodeld in Sources */,
 				C064390E21C5DF930025FEC1 /* AppDelegate.swift in Sources */,
+				C064395421C9BD4D0025FEC1 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +401,7 @@
 		};
 		C064391D21C5DF930025FEC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFC0E39A442E4675A6426491 /* Pods-Todorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +420,7 @@
 		};
 		C064391E21C5DF930025FEC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38250BB5F0550CE880667F68 /* Pods-Todorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,19 +459,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		C064392521C8FD360025FEC1 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				C064392621C8FD360025FEC1 /* DataModel.xcdatamodel */,
-			);
-			currentVersion = C064392621C8FD360025FEC1 /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = C064390221C5DF930025FEC1 /* Project object */;
 }
