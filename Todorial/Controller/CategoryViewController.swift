@@ -7,10 +7,9 @@
 //
 
 import UIKit
-import CoreData
 import RealmSwift
 
-class CategoryViewController: UITableViewController {
+class CategoryViewController: SwipeTableViewController {
     
     let realm = try! Realm()
     
@@ -20,11 +19,13 @@ class CategoryViewController: UITableViewController {
         super.viewDidLoad()
         //initial load from core data
         loadCategory()
+        
+        tableView.rowHeight = 80
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath)
+        
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         cell.textLabel?.text = categoryArray?[indexPath.row].name ?? "No categories added"
     
         return cell
@@ -42,7 +43,7 @@ class CategoryViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! TodoListViewController
+        let destinationVC = segue.destination as! SwipeTableViewController
         
         if let indexPath = tableView.indexPathForSelectedRow {
             destinationVC.selectedCategory = categoryArray?[indexPath.row]
@@ -86,6 +87,18 @@ class CategoryViewController: UITableViewController {
     func loadCategory () {
         categoryArray = realm.objects(Category.self)
         tableView.reloadData()
+    }
+    
+    override func updateModel(at indexPath: IndexPath) {
+        if let categoryDeletion = self.categoryArray?[indexPath.row]{
+            do {
+                try self.realm.write {
+                    self.realm.delete(categoryDeletion)
+                }
+            } catch {
+                print("Error deleting cell \(error)")
+            }
+        }
     }
 }
 
